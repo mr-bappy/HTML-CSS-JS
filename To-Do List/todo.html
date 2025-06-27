@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List - Yennam Vishal</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+        <!-- header section -->
+        <div class="header">
+            <!-- header left -->
+            <div class="header-left">
+                <h1>Create Task</h1>
+                <!-- enter task section -->
+                <div class="enterTask">
+                    <input type="text" placeholder="enter a task" class="taskValue">
+                    <button type="submit"onclick="taskAdd()">Add</button>
+                </div>
+            </div>
+            <!-- header right -->
+            <div class="header-right">
+                <h1>Vishal Yennam</h1>
+            </div>
+        </div>
+        <!-- error message -->
+        <div>
+            <span class="error-message"></span>
+        </div>
+        <!-- task container -->
+        <div class="task-container"></div>
+    </div>
+
+
+    <script src="todo.js"></script>
+</body>
+</html>

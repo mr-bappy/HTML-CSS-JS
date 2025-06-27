@@ -1,0 +1,180 @@
+/* setting font */
+@font-face {
+    font-family: zendots;
+    src: url(./fonts/Zen_Dots/ZenDots-Regular.ttf);
+}
+
+@font-face {
+    font-family: spacegrotesk;
+    src: url(./fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: alien-among-us;
+    src: url(./fonts/aliens_among_us/Aliens\ Among\ Us.ttf);
+}
+
+@font-face {
+    font-family: caviar;
+    src: url(./fonts/caviar_dreams/CaviarDreams.ttf);
+}
+
+@font-face {
+    font-family: redhat;
+    src: url(./fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+/* html styling */
+html{
+    font-size: 10px;
+    color: white;
+}
+
+/* universal styling */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: spacegrotesk;
+}
+
+/* container styling */
+.container{
+    background-image: url(./image3.jpg);
+    height: 100dvh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+}
+
+/* styling header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-size: 3rem;
+    color: #b3cfe5;
+}
+
+.header-left{
+    display: flex;
+    gap: 1rem;
+}
+
+/* enter task styling */
+.enterTask{
+    display: flex;
+
+    > input{
+        border: none;
+        outline: none;
+        padding: 0 1rem;
+        width: 30rem;
+        border-radius: 5px 0 0 5px;
+        font-size: 1.6rem;
+        background-color: #c1e8ff ;
+    }
+
+    > button{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0 1rem;
+        border-radius: 0 5px 5px 0;
+        font-size: 1.7rem;
+        font-weight: 600;
+        background-color: #7da0ca;
+        color: #061225 ;
+    }
+}
+
+/* error message styling */
+.error-message{
+    font-size: 1.8rem;
+    color: red;
+}
+
+/* task element styling */
+.task-container{
+    display: grid;
+    font-size: 1.7rem;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr); 
+}
+
+li{
+    position: relative;
+    margin: 0;
+    /* border: 1px solid red; */
+    list-style: circle inside;
+    padding: 0.5rem 2rem;
+    text-wrap: wrap;
+    font-size: 1.7rem;
+    background-color: royalblue;
+    border-radius: 5px;
+
+
+    > span{
+        position: absolute;
+        right: 0.5rem;
+        top: 0;
+        cursor: pointer;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: black;
+    }
+}
+
+.checked{
+    text-decoration: line-through;
+    list-style: disc;
+}
+
+@media (max-width: 900px){
+    .task-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:800px) {
+    html{
+        font-size: 8px;
+    }
+
+    .task-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-left{
+        flex-direction: column;
+    }
+
+    .enterTask{
+        >input{
+            padding: 1rem 1rem;
+        }
+    }
+}
+
+@media (max-width:500px){
+    .header-right{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .task-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .header-left{
+        width: 100%;
+        align-items: center;
+    }
+}
