@@ -9,7 +9,9 @@ const searchData = () => {
 const showData = async () => {
     if(cityInput === ""){
         return document.querySelector(".error").textContent = '*Please enter a city*';
-    } 
+    } else{
+        document.querySelector(".error").textContent = '';
+    }
 
     const weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=745921c20fa0677949a3f0b696ffa933`;
 
@@ -30,6 +32,9 @@ const showData = async () => {
         document.querySelector('.humidity').innerHTML = `${main.humidity}%`;
         document.querySelector('.pressure').innerHTML = `${main.pressure} hPa`;
         document.querySelector('.wind-speed').innerHTML = `${wind.speed} m/s`;
+
+        document.querySelector('.city-value').value = "";
+
     }catch(err){
         return document.querySelector(".error").textContent = '*Please enter a valid city*';
     }
