@@ -132,8 +132,9 @@ html{
 
 /* error styling */
 .error{
-    color: rgb(225, 0, 0);
+    color: black;
     font-size: 1.7rem;
+    font-weight: 600;
 }
 
 @media (max-width:1000px){
