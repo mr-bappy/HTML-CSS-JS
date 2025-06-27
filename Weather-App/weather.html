@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application - by Yennam Vishal</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <!-- main container -->
+    <div class="container">
+        <!-- left side section -->
+        <div class="left-side">
+            <h1>Weather Application</h1>
+            <a href="https://github.com/mr-bappy">- by Yennam Vishal</a>
+        </div>
+        <!-- right side section && weather container -->
+        <div class="weather-container">
+            <h1 class="weather-heading">Weather Details</h1>
+            <!-- input city section -->
+            <div class="weather-input">
+                <input type="text" placeholder="enter city name" required class="city-value">
+                <button class="search" onclick="searchData()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- error message -->
+            <div class="error"></div>
+            <!-- weather details -->
+            <div class="weather-details">
+                <div class="weather-image">
+                    <img src="./clouds.png" alt="weather-image" height="150px" class="image-weather">
+                </div>
+                <div > <h2 class="city-name"></h2> </div>
+                <div> <h2 class="city-weather"></h2> </div>
+            </div>
+
+            <!-- other details -->
+            <div class="other-details">
+                <div>
+                    <p><i class="fa-solid fa-temperature-three-quarters"></i> Temperature</p>
+                    <p><span class="temp"></span></p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-droplet"></i> Humidity</p>
+                    <p><span class="humidity"></span></p>
+                </div>               
+                <div>
+                    <p><i class="fa-solid fa-wave-square"></i> Pressure</p>
+                    <p><span class="pressure"></span></p>
+                </div>
+                
+                 <div>
+                    <p><i class="fa-solid fa-wind"></i> Wind speed</p>
+                    <p><span class="wind-speed"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+    <script src="https://kit.fontawesome.com/aad04d0a8a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

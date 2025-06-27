@@ -1,0 +1,167 @@
+/* setting fonts */
+@font-face {
+    font-family: spacegrotesk;
+    src: url(./fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+/* setting html */
+html{
+    font-size: 10px;
+}
+
+/* universal styling */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: spacegrotesk;
+    color: white;
+}
+
+/* container styling */
+.container{
+    background-color: #0f2a1d;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* left side section styling */
+.left-side{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side h1{
+    font-size: 5rem;
+    color: #375534;
+}
+
+.left-side a{
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: end;
+}
+
+
+/* right side section or weather container styling */
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #6b9071;
+    padding: 3rem;
+    border-radius: 10px;
+    width: 45rem;
+}
+
+
+.weather-heading{
+    font-size: 3.5rem;
+    text-align: center;
+    color: #163832;
+}
+
+.weather-input{
+    display: flex;
+    width: 100%;
+
+    > input{
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0.5rem 1rem;
+        font-size: 1.6rem;
+        color: black;
+        border-radius: 5px 0 0 5px;
+    }
+
+    > button{
+        outline: none;
+        border: none;
+        padding: 0rem 1rem;
+        background-color: white;
+        cursor: pointer;
+        border-radius: 0 5px 5px 0;
+        
+        > i{
+            color: black;
+            font-weight: 700;
+            font-size: 1.6rem;         
+        }
+    }
+}
+
+/* weather details styling */
+.weather-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-details h2{
+    font-size: 2.5rem;
+    color: #071e07;
+}
+
+
+/* other details */
+.other-details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.other-details div{
+    background-color: #163832;
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    border-radius: 10px;
+
+    > p{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    > p > i{
+        font-size: 1.4rem;
+    }
+}
+
+/* error styling */
+.error{
+    color: rgb(255, 92, 92);
+    font-size: 1.7rem;
+}
+
+@media (max-width:1000px){
+    html{
+        font-size: 8px;
+    }
+}
+
+@media (max-width:800px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .left-side h1{
+        font-size: 2.5rem;
+    }
+
+    .left-side a{
+        font-size: 1.5rem;
+    }
+
+    .weather-container{
+        order: 1;
+    }
+
+    .left-side{
+        order: 2;
+    }
+}
