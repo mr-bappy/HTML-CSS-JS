@@ -17,7 +17,6 @@ const taskContainer = document.querySelector('.task-container');
 
 // on click event handling
 const taskAdd = () => {   
-
     // checking if the task is empty or containing only spaces or already added
     if(taskValue.value.trim() == ""){
         taskValue.value = "";
